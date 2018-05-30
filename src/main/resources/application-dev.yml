@@ -3,9 +3,13 @@ security:
     client:
       clientId: client
       clientSecret: secret
-      accessTokenUri: http://localhost:8080/auth/oauth/token
-      userAuthorizationUri: http://localhost:8080/auth/oauth/authorize
+      accessTokenUri: http://localhost:1100/auth/oauth/token
+      userAuthorizationUri: http://localhost:1100/auth/oauth/authorize
+      grant-type: password
     resource:
-      userInfoUri: http://localhost:8080/auth/user/me
-      preferTokenInfo: false
+      userInfoUri: http://localhost:1100/auth/user/me
+      preferTokenInfo: true
+      jwt:
+        key-uri: http://localhost:1100/auth/oauth/token_key
+
 
